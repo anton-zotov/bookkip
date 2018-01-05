@@ -1,0 +1,391 @@
+html,body,textarea {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	color: white;
+	height: 50px;
+	line-height: 50px;
+	background-color: #E45F56;
+
+}
+
+header div {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 50px;
+}
+
+#logo {
+	color: white;
+	font-size: 36px;
+	text-decoration: none;
+	padding: 0 20px;
+}
+
+#body {
+	text-align: center;
+}
+#content {
+	text-align: left;
+	display: inline-block;
+	width: 100%;
+	max-width: 1000px;
+	padding: 10px 20px 30px 20px;
+	box-sizing: border-box;
+}
+
+.form-horizontal label{
+	min-width: 150px;
+	text-align: right;
+	display: table-cell;
+	vertical-align: middle;
+}
+.form-horizontal .input-holder {
+	width: 100%;
+
+	vertical-align: middle;
+	padding: 0 20px;
+	display: table-cell;
+}
+@media (max-width: 700px) {
+	.form-horizontal label {
+		display: block;
+		text-align: center;
+		margin-bottom: 3px;
+	}
+	.form-horizontal .input-holder {
+		display: block;
+		box-sizing: border-box;
+		padding: 0;
+	}
+}
+.form-horizontal .input-holder input[type=text],
+.form-horizontal .input-holder textarea {
+	width: 100%;
+	box-sizing: border-box;
+}
+.form-horizontal .input-holder textarea {
+	resize: none;
+	height: 130px;
+}
+.form-horizontal .input-holder input[type=text].date-input {
+	width: 110px;
+}
+input.error {
+	background-color: rgb(255, 182, 182);
+}
+.form-horizontal .row {
+	margin-bottom: 15px;
+}
+.rating i.fa {
+	margin-right: 5px;
+}
+.rating[editable="true"] i.fa {
+	cursor: pointer;
+}
+
+.inner-link {
+	border: 1px dotted #2B587A;
+	border-width: 0 0 1px 0;
+	cursor: pointer;
+	color: #2B587A;
+}
+
+.page-description {
+	margin-top: 15px;
+	font-size: 26px;
+	color: #888;
+}
+
+a {
+	color: #12525b;
+}
+
+/* --------- Меню ------------ */
+#user-name {
+	float: right;
+	padding: 0 20px;
+}
+#user-name:hover {
+	cursor: pointer;
+	background-color: #D24B42;
+}
+#user-menu {
+	display: none;
+	position: fixed;
+	top: 50px;
+	right: 0px;
+	background-color: #ddd;
+	width: 150px;
+}
+#user-menu a {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	color: black;
+	padding: 15px 20px;
+	text-decoration: none;
+}
+#user-menu a:hover {
+	background-color: #d0d0d0;
+}
+#top-menu b, #mobile-menu b {
+	background-color: white;
+	color: #E45F56;
+	font-weight: bold;
+	border-radius: 6px;
+	padding: 0 3px;
+	display: none;
+}
+/* ------- Мобильное меню --------- */
+#navicon {
+	float: right;
+	padding: 0 20px;
+	font-size: 1.40em;
+	cursor: pointer;
+}
+#mobile-menu {
+	display: none;
+	position: absolute;
+	right: 0;
+	width: 300px;
+	top: 50px;
+	z-index: 9999;
+	background-color: #E45F56;
+	border: 1px solid #B33C34;
+}
+#mobile-menu a {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 7px 20px;
+	text-decoration: none;
+	color: white;
+}
+@media (min-width: 1210px) {
+	#navicon, #mobile-menu {
+		display: none;
+	}
+}
+/* ------- Конец мобильное меню --------- */
+
+#top-menu {
+	margin-left: 40px;
+}
+#top-menu a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	height: 50px;
+	padding: 0 20px;
+	font-size: 20px;
+	margin-right: -4px;
+}
+#top-menu a.active, #top-menu a:hover {
+	background-color: #D24B42;
+	cursor: pointer;
+}
+@media (max-width: 1209px) {
+	#top-menu, #user-name, #user-menu{
+		display: none;
+	}
+}
+/* --------- конец меню ------ */
+
+/* --------- книги в списке -- */
+.book-small {
+	text-align: left;
+	display: none;
+	width: 300px;
+	margin: 30px 10px 0 10px;
+	vertical-align: top;
+	background-color: white;
+	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.book-small a {
+	color: black;
+	text-decoration: none;
+}
+.book-small .cover-holder {
+	height: 80px;
+	width: 300px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+.book-small .cover-image {
+	width: 300px;
+	position: relative;
+}
+.book-small .cover-holder.empty {
+	background-color: #f0f0f0;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+}
+.book-small .cover-holder i {
+	top: 50%;
+	margin-top: -32px;
+	position: relative;
+	color: #ccc;
+	display: block;
+}
+.book-small .book-author {
+	font-size: 12px;
+	font-weight: 600;
+	padding: 5px 10px;
+}
+.book-small .book-title {
+	margin-top: 10px;
+	font-size: 16px;
+	padding: 5px 10px;
+	line-height: 18px;
+}
+.book-small .rating {
+	padding: 5px 10px;
+}
+.book-small .rating .fa {
+	font-size: 1.2em;
+}
+.book-small .book-date {
+	padding-top: 7px;
+	padding-right: 10px;
+	font-size: 14px;
+	float: right;
+}
+.book-tags {
+	padding: 10px 10px;
+}
+.book-tag {
+	cursor: pointer;
+	color: #2B587A;
+	position: relative;
+	font-size: 14px;
+	line-height: 20px;
+}
+.book-tag .tag-border{
+	position: absolute;
+	border: 1px dotted #2B587A;
+	border-width: 0 0 1px 0;
+	width: 100%;
+	left: 0;
+	bottom: 1px;
+}
+.load_more {
+	display: inline-block;
+	width: 300px;
+	text-align: center;
+	font-size: 20px;
+	color: #999;
+	margin-top: 30px;
+	height: 124px;
+	padding-top: 43px;
+}
+.load_more:hover {
+	color:black;
+	cursor: pointer;
+}
+.load_more i {
+	display: block;
+}
+/* --------- конец книги в списке -- */
+
+/* --------- поиск -----------*/
+#search-holder {
+	text-align: center;
+}
+#search-parent {
+	position: relative;
+	display: inline-block;
+	width: 400px;
+	max-width: 100%;
+}
+#search-holder i {
+	position: absolute;
+	top: 11px;
+	left: 15px;
+}
+#search {
+	padding-left: 40px;
+	border-radius: 16px;
+	width: 100%;
+	box-sizing: border-box;
+}
+#search::-webkit-input-placeholder
+{
+	color: #888;
+}
+#search-autocomplete {
+	display: none;
+	position: absolute;
+	width: 100%;
+	padding: 0 10px;
+	z-index: 10;
+	box-sizing: border-box;
+}
+#search-autocomplete li {
+	text-align: left;
+	padding: 5px 10px;
+	background-color: white;
+}
+#search-autocomplete li.selected {
+	background-color: #B3CCCA;
+}
+#search-autocomplete li:hover {
+	cursor: pointer;
+	background-color: #B3CCCA;
+}
+#search-autocomplete li .hint-title {
+	display: table-cell;
+	width: 100%;
+}
+#search-autocomplete li .hint-title b {
+	font-weight: bold;
+}
+#search-autocomplete li .hint-type {
+	display: table-cell;
+	width: 50px;
+	font-weight: bold;
+	font-size: 14px;
+}
+/* --------- конец поиск -----*/
+
+/* --------- диалоги ---------*/
+#shadow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.6;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	display: none;
+}
+#dialog-holder {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 50px;
+	z-index: 1001;
+	box-sizing: border-box;
+	text-align: center;
+	display: none;
+	position: fixed;
+}
+.dialog {
+	min-width: 300px;
+	min-height: 250px;
+	background-color: white;
+	box-sizing: border-box;
+	display: inline-block;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	z-index: 1002;
+	max-height: 100%;
+}
+/* --------- конец диалоги ---------*/

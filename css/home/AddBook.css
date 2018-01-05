@@ -1,0 +1,112 @@
+#cover-col {
+	text-align: right;
+	margin-bottom: 10px;
+}
+#cover-holder {
+	width: 289px;
+	height: 384px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	background-color: #f0f0f0;
+	border: 1px solid #ddd;
+	z-index: 10;
+}
+#cover-holder:hover {
+	cursor: pointer;
+}
+#icons-holder i {
+	font-size: 8em;
+	top: 50%;
+	margin-top: -64px;
+	position: relative;
+	color: #ccc;
+	display: block;
+}
+#cover-holder i.fa-plus {
+	display: none;
+}
+#cover-holder:hover i.fa-plus, #cover-holder.file-hover  i.fa-plus{
+	display: block;
+}
+#cover-holder:hover i.fa-book, #cover-holder.file-hover  i.fa-book{
+	display: none;
+}
+#icons-holder {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: absolute;
+}
+#preview-chose {
+	background: rgba(0,0,0,0.5);
+	height: 82px;
+	z-index: 900;
+	cursor: move;
+	display: none;
+	text-align: right;
+}
+#preview-chose i {
+	color: white;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#cover-select {
+	display: none;
+}
+
+#cover-image {
+	max-width: 289px;
+	max-height: 384px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+#cover-image[src=""] {
+	display: none;
+}
+
+#autoload {
+	margin-bottom: 10px;
+}
+
+#chose-cover-dialog {
+	padding: 30px 30px 10px 10px;
+	overflow-y: scroll;
+}
+#chose-cover-dialog>i.fa {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+.chose-cover-holder {
+	height: 200px;
+	max-width: 200px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	border: 1px solid white;
+	margin: 10px;
+}
+.chose-cover-holder:hover {
+	border: 1px solid #999;
+	cursor: pointer;
+}
+.chose-cover-holder img {
+	max-height: 200px;
+	max-width: 200px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: relative;
+}
+#back {
+	display: none;
+	margin-right: 10px;
+}
+@media (max-width: 700px) {
+	.button-holder {
+		margin-top: 10px;
+	}

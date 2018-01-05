@@ -1,0 +1,126 @@
+html,body {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 900px) {
+	.half-screen {
+		width: 100%;
+		text-align: center;
+		min-height: 280px;
+	}
+	.vertical-middle {
+		padding: 0 15px;
+		max-width: 438px;
+		display: inline-block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#form-holder input[type=text],
+	#form-holder input[type=password] {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@media (min-width: 900px) {
+	.half-screen {
+		width: 50%;
+		float: left;
+		min-height: 100%;
+	}
+	.half-screen:first-child .vertical-middle{
+		right: 0%;
+		margin-right: 50px;
+	}
+	.half-screen:nth-child(2) {
+		padding-left: 50px;
+	}
+	.vertical-middle {
+		margin-top: -118px;
+		position: absolute;
+	}
+	#form-holder {
+		width: 354px;
+		box-sizing: border-box;
+	}
+	#form-holder input[type=text],
+	#form-holder input[type=password] {
+		width: 300px;
+	}
+	#background {
+		width: 100%;
+		height: 45%;
+		padding-bottom: 160px;
+		box-sizing: border-box;
+		z-index: -1;
+		position: absolute;
+	}
+	#background div{
+		background-image: url(/images/back2.jpg);
+		height: 100%;
+	}
+}
+
+.half-screen {
+	box-sizing: border-box;
+	position: relative;
+}
+
+.vertical-middle {
+	top: 50%;
+}
+
+h1 {
+	font-size: 62px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+h2 {
+	font-size: 22px;
+
+	margin-bottom: 30px;
+}
+
+ul#main-list li {
+	margin-bottom: 10px;
+	text-indent:10px;
+	font-size: 18px;
+}
+ul#main-list li:before {
+	content:"-"; 
+	position:relative; 
+	left:-5px;
+}
+
+#form-holder {
+	border: 1px solid #ddd;
+	padding: 15px;
+}
+
+#form-holder input[type=text],
+#form-holder input[type=password] {
+	display: block;
+	margin-bottom: 15px;
+}
+
+#login-form {
+	display: none;
+}
+
+.error-description {
+	text-align: left;
+	padding: 0 0 10px 0;
+	font-weight: bold;
+	line-height: 20px;
+}
+.social-button-holder {
+	margin-bottom: 10px;
+}
+#vk-login-button {
+	display: inline-block;
+	margin-left: 10px;
+}
+#vk-login-button td {
+	vertical-align: top;
+}

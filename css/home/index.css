@@ -1,0 +1,30 @@
+html {
+	background-color: #eee;
+}
+#content {
+	text-align: center;
+}
+#ajax-content {
+	display: inline-block;
+	width: 320px;
+	text-align: left;
+}
+@media (min-width: 700px) {
+	#ajax-content {
+		width: 640px;
+	}
+}
+@media (min-width: 1020px) {
+	#ajax-content {
+		width: 960px;
+	}
+}
+#no_books_hint {
+	margin-top: 40px;
+	text-align: center;
+	color: #888;
+}
+#no_books_hint a {
+	font-weight: bold;
+	color: #888;
+}
