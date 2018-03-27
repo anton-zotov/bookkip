@@ -9,7 +9,7 @@
   <body>
     <?php echo $content; ?>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <link href="/css/reset.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/login.css" rel="stylesheet">

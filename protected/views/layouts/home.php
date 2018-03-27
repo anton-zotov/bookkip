@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:600,400,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 	<link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/css/reset.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
