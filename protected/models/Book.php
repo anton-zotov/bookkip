@@ -54,7 +54,8 @@ class Book extends CActiveRecord
 
 	public function getCover()
 	{
-		if (!$this->cover) return "";
+		$dir_name = $_SERVER['DOCUMENT_ROOT'] . self::getBaseImagePath();
+		if (!$this->cover || !file_exists($dir_name . '/' . $this->cover)) return "";
 		return self::getBaseImagePath() . '/' . $this->cover;
 	}
 
@@ -102,8 +103,12 @@ class Book extends CActiveRecord
 		Yii::import('ext.SimpleImage');
 		$image = new SimpleImage();
 		$dir_name = $_SERVER['DOCUMENT_ROOT'] . self::getBaseImagePath();
-        $image->load($dir_name . '/' . $this->cover);
-        //return $this->cover_pos_percent.'px';
+		try {
+			$image->load($dir_name . '/' . $this->cover);
+		} catch (Exception $e) {
+			return 0;
+		}
+		//return $this->cover_pos_percent.'px';
 		return -300 / $image->getWidth() * $image->getHeight() * $this->cover_pos_percent.'px';
 	}
 }
